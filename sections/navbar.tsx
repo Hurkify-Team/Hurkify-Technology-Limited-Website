@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { ConsultationDialog } from "@/components/consultation-dialog";
 import { Logo } from "@/components/logo";
 import { navItems } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
@@ -57,11 +57,7 @@ export function Navbar() {
           ))}
         </div>
 
-        <Button asChild className="hidden h-9 rounded-md px-5 text-xs lg:inline-flex" size="sm">
-          <a href="#consultation">
-            Book Consultation <ArrowRight className="size-4" />
-          </a>
-        </Button>
+        <ConsultationDialog className="hidden h-9 rounded-md px-5 text-xs lg:inline-flex" size="sm" />
 
         <button
           className={cn(
@@ -106,11 +102,7 @@ export function Navbar() {
               {item.label}
             </a>
           ))}
-          <Button asChild className="mt-3 w-full">
-            <a href="#consultation" onClick={() => setOpen(false)}>
-              Book Consultation <ArrowRight className="size-4" />
-            </a>
-          </Button>
+          <ConsultationDialog className="mt-3 w-full" onOpen={() => setOpen(false)} />
         </div>
       </div>
     </header>

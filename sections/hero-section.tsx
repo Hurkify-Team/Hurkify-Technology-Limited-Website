@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ConsultationDialog } from "@/components/consultation-dialog";
 import { Reveal } from "@/components/reveal";
 import { trustBadges } from "@/lib/site-data";
 
@@ -26,11 +27,10 @@ export function HeroSection() {
               operations, drive efficiency, and achieve measurable growth through technology.
             </p>
             <div className="mt-7 flex flex-col gap-4 sm:flex-row">
-              <Button asChild className="h-[46px] rounded-md px-7 text-xs">
-                <a href="#consultation">
-                  Book a Consultation <ArrowRight className="size-4" />
-                </a>
-              </Button>
+              <ConsultationDialog
+                className="h-[46px] rounded-md px-7 text-xs"
+                label="Book a Consultation"
+              />
               <Button
                 asChild
                 variant="secondary"
