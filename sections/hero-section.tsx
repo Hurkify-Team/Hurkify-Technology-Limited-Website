@@ -27,11 +27,7 @@ export function HeroSection() {
             </p>
             <div className="mt-7 flex flex-col gap-4 sm:flex-row">
               <Button asChild className="h-[46px] rounded-md px-7 text-xs">
-                <a
-                  href="https://wa.me/2349045083581?text=Hello%20Hurkify%2C%20I%20would%20like%20to%20book%20a%20consultation."
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href="#consultation">
                   Book a Consultation <ArrowRight className="size-4" />
                 </a>
               </Button>

@@ -1,6 +1,7 @@
 import { Mail, MessageCircle, Phone } from "lucide-react";
 import type { ElementType } from "react";
 import { Button } from "@/components/ui/button";
+import { ContactForm } from "@/components/contact-form";
 import { Reveal } from "@/components/reveal";
 
 export function ContactSection() {
@@ -21,11 +22,7 @@ export function ContactSection() {
                 technology solutions.
               </p>
               <Button asChild className="mt-5 h-9 rounded-md px-5 text-xs">
-                <a
-                  href="https://wa.me/2349045083581?text=Hello%20Hurkify%2C%20I%20would%20like%20to%20book%20a%20consultation."
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href="#consultation">
                   Book a Consultation
                 </a>
               </Button>
@@ -39,12 +36,32 @@ export function ContactSection() {
               <ContactTile
                 icon={MessageCircle}
                 title="Chat on WhatsApp"
-                value="Chat With Us"
-                href="https://wa.me/2349045083581?text=Hello%20Hurkify%2C%20I%20would%20like%20to%20book%20a%20consultation."
+                value="Customer Support"
+                href="https://wa.me/2349045083581?text=Hello%20Hurkify%20Support%2C%20I%20need%20assistance%20with%20your%20technology%20services."
               />
             </div>
           </Reveal>
         </div>
+
+        <Reveal delay={0.12}>
+          <div id="consultation" className="section-anchor grid gap-8 py-10 lg:grid-cols-[0.38fr_0.62fr]">
+            <div>
+              <p className="mb-3 text-[11px] font-black uppercase tracking-[0.18em] text-purple-200">
+                Consultation Request
+              </p>
+              <h3 className="text-[28px] font-black leading-tight tracking-tight md:text-[34px]">
+                Tell us what you want to build, fix, or modernize.
+              </h3>
+              <p className="mt-4 max-w-[420px] text-sm leading-7 text-white/66">
+                Share your details once, then choose whether to send the request to our email or
+                continue the conversation through WhatsApp support.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white p-5 shadow-[0_30px_90px_rgba(0,0,0,.32)] md:p-7">
+              <ContactForm />
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

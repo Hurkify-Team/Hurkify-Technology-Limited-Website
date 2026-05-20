@@ -19,6 +19,7 @@ export async function POST(request: Request) {
   if (supabase) {
     await supabase.from("contact_submissions").insert({
       name: data.name,
+      organization: data.organization || null,
       email: data.email,
       phone: data.phone || null,
       service: data.service,
@@ -43,6 +44,7 @@ export async function POST(request: Request) {
     subject: `New Hurkify enquiry: ${data.service}`,
     text: [
       `Name: ${data.name}`,
+      `Organization: ${data.organization || "Not provided"}`,
       `Email: ${data.email}`,
       `Phone: ${data.phone || "Not provided"}`,
       `Service: ${data.service}`,

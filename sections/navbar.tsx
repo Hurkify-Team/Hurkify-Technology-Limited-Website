@@ -58,11 +58,7 @@ export function Navbar() {
         </div>
 
         <Button asChild className="hidden h-9 rounded-md px-5 text-xs lg:inline-flex" size="sm">
-          <a
-            href="https://wa.me/2349045083581?text=Hello%20Hurkify%2C%20I%20would%20like%20to%20book%20a%20consultation."
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="#consultation">
             Book Consultation <ArrowRight className="size-4" />
           </a>
         </Button>
@@ -111,11 +107,7 @@ export function Navbar() {
             </a>
           ))}
           <Button asChild className="mt-3 w-full">
-            <a
-              href="https://wa.me/2349045083581?text=Hello%20Hurkify%2C%20I%20would%20like%20to%20book%20a%20consultation."
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="#consultation" onClick={() => setOpen(false)}>
               Book Consultation <ArrowRight className="size-4" />
             </a>
           </Button>

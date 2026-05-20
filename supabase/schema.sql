@@ -1,6 +1,7 @@
 create table if not exists public.contact_submissions (
   id uuid primary key default gen_random_uuid(),
   name text not null,
+  organization text,
   email text not null,
   phone text,
   service text not null,
