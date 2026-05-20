@@ -6,7 +6,7 @@ import tseslint from "typescript-eslint";
 
 export default [
   {
-    ignores: [".next/**", "node_modules/**", "next-env.d.ts"],
+    ignores: [".next/**", "frontend/.next/**", "node_modules/**", "frontend/next-env.d.ts"],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
@@ -19,7 +19,7 @@ export default [
     },
     languageOptions: {
       parserOptions: {
-        project: "./tsconfig.json",
+        project: "./frontend/tsconfig.json",
       },
     },
     settings: {
@@ -27,7 +27,7 @@ export default [
         version: "detect",
       },
       next: {
-        rootDir: ".",
+        rootDir: "frontend",
       },
     },
     rules: {

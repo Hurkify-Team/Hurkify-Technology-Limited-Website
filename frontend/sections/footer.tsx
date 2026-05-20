@@ -37,7 +37,10 @@ export function Footer() {
             <h3 className="mb-4 text-sm font-black">Contact Info</h3>
             <div className="space-y-4 text-sm text-white/65">
               <p className="flex gap-3"><MapPin className="mt-1 size-4 shrink-0" />3rd Floor, 28A Remi Olowude Road, Lagos, Nigeria.</p>
-              <p className="flex gap-3"><Phone className="mt-1 size-4 shrink-0" />+234 904 508 3581</p>
+              <p className="flex gap-3">
+                <Phone className="mt-1 size-4 shrink-0" />
+                +234 904 508 3581 or +234 704 319 0748
+              </p>
               <p className="flex gap-3"><Mail className="mt-1 size-4 shrink-0" />info@hurkify.com</p>
             </div>
           </div>

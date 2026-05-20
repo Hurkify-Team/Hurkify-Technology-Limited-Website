@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { contactSchema } from "@/lib/contact-schema";
-import { contactRecipient, contactSender, resend } from "@/lib/resend";
-import { supabase } from "@/lib/supabase";
+import { contactSchema } from "@backend/contact/schema";
+import { contactRecipient, contactSender, resend } from "@backend/services/resend";
+import { supabase } from "@backend/services/supabase";
 
 export async function POST(request: Request) {
   const payload = await request.json().catch(() => null);

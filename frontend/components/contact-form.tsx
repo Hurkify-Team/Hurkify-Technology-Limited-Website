@@ -6,8 +6,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2, Mail, MessageCircle, Send } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
-import { contactSchema, type ContactInput } from "@/lib/contact-schema";
 import { cn } from "@/lib/utils";
+import { contactSchema, type ContactInput } from "@backend/contact/schema";
 
 const services = [
   "IT Consulting & Digital Transformation",

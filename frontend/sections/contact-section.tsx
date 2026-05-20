@@ -30,7 +30,12 @@ export function ContactSection() {
 
           <Reveal delay={0.08}>
             <div className="grid gap-4 md:grid-cols-3">
-              <ContactTile icon={Phone} title="Call Us" value="+234 906 825 1344" href="tel:+2349045083581" />
+              <ContactTile
+                icon={Phone}
+                title="Call Us"
+                value="+234 904 508 3581 or +234 704 319 0748"
+                href="tel:+2349045083581"
+              />
               <ContactTile icon={Mail} title="Email Us" value="info@hurkify.com" href="mailto:info@hurkify.com" />
               <ContactTile
                 icon={MessageCircle}

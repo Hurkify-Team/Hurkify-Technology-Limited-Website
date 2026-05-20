@@ -24,3 +24,22 @@ npm run dev
 ```
 
 Copy `.env.example` to `.env.local` and fill in Resend, Supabase, and Sanity values before enabling production submissions.
+
+## Project Structure
+
+```text
+frontend/
+  app/          Next.js App Router pages and route adapters
+  components/   Reusable React and shadcn-style UI components
+  sections/     One-page website sections
+  public/       Optimized website images and brand assets
+  lib/          Frontend-only data and utility helpers
+
+backend/
+  contact/      Contact/consultation validation schema
+  services/     Resend and Supabase server integrations
+  database/     PostgreSQL/Supabase schema
+  cms/          Sanity CMS configuration and schemas
+```
+
+The frontend app contains a thin `app/api/contact` route so Next.js can expose the endpoint, while the server-side helpers it uses live under `backend/`.
